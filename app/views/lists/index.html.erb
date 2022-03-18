@@ -1,4 +1,5 @@
 <div class="list-wrap">
+<<<<<<< HEAD
     <% @lists.each do |list| %>
       <div class="list-box">
         <% if list.image.attached? %>
@@ -15,4 +16,20 @@
 </div>
 
 
+=======
+  <%= @lists.each do |list| %>
+    <div class="list-box">
+      <% if list.image.attached? %>
+        <%= image_tag list.image, size:"200x200" %>
+      <% else %>
+        <% image_tag "no_image", size:"200x200" %>
+      <% end %>
+      <div class="list-comment">
+        <span class="list-body"><%= list.body %></span>
+        <span class="list-body"><%= link_to list.title, list_path(list.id) %></span>
+      </div>
+    </div>
+  <% end %>
+</div>
+>>>>>>> refs/remotes/origin/main
 
